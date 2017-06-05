@@ -1,0 +1,22 @@
+{
+  "name": "busch-cogen-calendar",
+  "version": "1.0.0",
+  "description": "scheduling cogen employees",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coffeeteer/busch-cogen-calendar.git"
+  },
+  "author": "coffeeteer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coffeeteer/busch-cogen-calendar/issues"
+  },
+  "homepage": "https://github.com/coffeeteer/busch-cogen-calendar#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
