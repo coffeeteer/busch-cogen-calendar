@@ -6,7 +6,7 @@ $(document).ready(function(){
 	      {
 	        content: 'Travis G',
 	        startDate: new Date(2017, 5, 5, 8 ),
-	        endDate: new Date(2017, 5, 5, 4 ),
+	        endDate: new Date(2017, 5, 5, 4 )
 	      },
 	      {
 	      	content: 'Lenny S',
