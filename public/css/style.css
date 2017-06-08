@@ -1,7 +1,14 @@
-.scheduler-event.scheduler-event-short.scheduler-event-past {
+/*.scheduler-event.scheduler-event-short.scheduler-event-past {
 	display: inline;
 }
 
 .scheduler-event.scheduler-event-short.scheduler-event-past:nth-child(2) {
 	float: right;
-}
+}*/
+
+html, body{
+    margin:0px;
+    padding:0px;
+    height:100%;
+    overflow:hidden;
+}   
