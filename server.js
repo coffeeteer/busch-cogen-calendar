@@ -1,7 +1,6 @@
 var http = require('http');
 var express = require('express');
-var bootstrapCalendar = require("bootstrap-calendar");
-// var calendarJs= require('calendar-js');
+// var bootstrapCalendar = require("bootstrap-calendar");
 
 const app = express();
 
