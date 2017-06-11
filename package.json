@@ -17,8 +17,6 @@
   },
   "homepage": "https://github.com/coffeeteer/busch-cogen-calendar#readme",
   "dependencies": {
-    "bootstrap-calendar": "^0.2.4",
-    "calendar-js": "^1.1.1",
     "express": "^4.15.3"
   }
 }
