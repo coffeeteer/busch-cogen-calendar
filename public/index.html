@@ -3,19 +3,638 @@
 <head>
 	<title>Busch Cogen Calendar</title>
 	<!-- <link href="http://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link> -->
-	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap-calendar/css/calendar.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 
 	<!-- <script type="text/javascript" src="http://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script> -->
-	<script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4=" crossorigin="anonymous"></script>
-	<!-- <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script> -->
-	<!-- <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
-	<script type="text/javascript" src="/bower_components/underscore/underscore.js"></script>
-	<script type="text/javascript" src="/bower_components/bootstrap-calendar/js/calendar.js"></script>
-	<script type="text/javascript" src="/bower_components/moment/moment.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="/javascript/script.js"></script>
 </head>
 <body>
-	<div id="calendar">Hello, interwebs</div>
+	<!-- <div id="calendar">Hello, interwebs</div> -->
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>facebook events</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/css.css" rel="stylesheet">
+
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="index.php?page=byer">Byer</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  <link href="css/calendar.css" rel="stylesheet">
+
+<h1 class="title text-center"> June 2017 </h1>
+<div class="calendar" data-toggle="calendar">
+	<div class="row">
+	
+    <div class="col-xs-12 calendar-day calendar-no-current-month">
+		<time datetime="2017-5-28">28</time>
+	</div>
+    <div class="col-xs-12 calendar-day calendar-no-current-month">
+		<time datetime="2017-5-29">29</time>
+	</div>
+    <div class="col-xs-12 calendar-day calendar-no-current-month">
+		<time datetime="2017-5-30">30</time>
+	</div>
+    <div class="col-xs-12 calendar-day calendar-no-current-month">
+		<time datetime="2017-5-31">31</time>
+	</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-1">1</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-2">2</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-3">3</time></div></div>
+		<div class="row">
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-4">4</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-5">5</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-6">6</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-7">7</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-8">8</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-9">9</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-10">10</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Vild med vand</h4>
+						<div class="desc">
+							Få en unik oplevelse på vandet med en af landets hurtigste speedbåde	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			
+				<div class="events">
+					<div class="event">
+						<h4>* Stand Up Paddling - Havnens dag 2017</h4>
+						<div class="desc">
+							Nordjydsk Windsurfing Klub indbyder alle interesserede til at prøve Stand Up Paddling.<br />
+<br />
+Stand Up Paddling er enkel form for sejlads, som gør det let at komme ud på vandet. Stand Up Paddling henvender sig til hele familien – alle kan være med.<br />
+<br />
+Klubben har igennem de seneste år oplevet stigende interesse for Stand Up Paddling. Klubben investere løbende i nyt udstyr og tilbyder i dag SUP-intro, som sikre at nye medlemmer kommer hurtigt og sikkert i gang med sporten.<br />
+<br />
+Ved åbningsfesten i Vestre Fjordpark finder du os på stand 19 og 20. Her har du mulighed for at komme ud og prøve. Vi sørger for udstyr – så det eneste du skal medbringe er badetøj.<br />
+<br />
+Vi glæder os til at se dig.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			
+				<div class="events">
+					<div class="event">
+						<h4>* Kantrum</h4>
+						<div class="desc">
+							Har du hørt om Stand Up Paddle (SUP)? Og har du lyst til at prøve kræfter med denne hurtigt voksende surf sport, men har aldrig taget det sidste skridt ud på vandet? Eller er du bare frisk på en hyggelig og sjov dag på SUP? <br />
+<br />
+Så er NWK og KANTRUM SUP lige noget for dig - optaktsevents til VM i SUP 2017 i Danmark! <br />
+Kig forbi plads 21 & 22 til indvielse af Vestre Fjordpark i Aalborg lørdag den 10. Juni kl. 11:00<br />
+<br />
+<br />
+Du behøver ikke være en vild vandhund eller have prøvet SUP før - KANTRUM er for alle, hvor der er fokus på masser af hygge og sjov på vandet med både undervisning og aktiviteter! ;-)<br />
+<br />
+<br />
+Vi glæder os til at se dig på vandet! <br />
+<br />
+PROGRAM<br />
+<br />
+Kl. 11:00 :          Officiel åbning af Vestre Fjordpark<br />
+Kl. 12 -17:          Prøv SUP gratis hele dagen<br />
+<br />
+Kl. 12 -17:          Lav den hurtigste tid på en 200 m SUP-bane og vind billet til Crossing Copenhagen<br />
+<br />
+den 1. September 2017 – Dagen hvor at VM i SUP starter i Danmark!<br />
+<br />
+Kl. 14:00 :          Red Paddle Dragon Race - 6,7 meter langt SUP board til 4 personer<br />
+Kl. 17.00:           Tak for i dag!<br />
+<br />
+Eventen afvikles denne dag af Nordjydsk Windsurfing Klub (NWK) i samarbejde med Dansk Surf og Rafting Forbund (DSRF) og er støtte af Aalborg Kommune.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			
+				<div class="events">
+					<div class="event">
+						<h4>* Windsurfing - Havnens dag 2017</h4>
+						<div class="desc">
+							Nordjydsk Windsurfing Klub indbyder alle interesserede til at høre om vores windsurfing aktiviteter.<br />
+<br />
+Windsurfing er en simpel form for sejlads, hvor det gælder om at fange vinden i sejlet og på den måde komme i fremdrift. For den erfarende surfer er hastigheder på 40-60 km/t almindelig.<br />
+<br />
+Klubben har oplevet stigende interesse for windsurfing og tilbyder i dag undervisning for begyndere og let øvet.<br />
+ <br />
+Ved åbningsfesten i Vestre Fjordpark finder du os på stand 19 og 20. Her har du mulighed for at se noget af vores udstyr og høre mere om vores aktiviteter.<br />
+<br />
+Vi glæder os til at se dig.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div></div>
+		<div class="row">
+	<div class="col-xs-12 calendar-day today">
+		<time datetime="2017-06-11">11</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-12">12</time>
+				<div class="events">
+					<div class="event">
+						<h4>* PRØVE UGE og Indskolingsforløb UGE 24</h4>
+						<div class="desc">
+							Prøveuge og indskolingsforløb - uge 24<br />
+I prøveugen kommer børn og unge, som gerne vil gå på Mentiqa Nordjylland, til at være det hold, som de eventuel kan blive en del af. De deltager i undervisningen, møder de andre elever og får et indblik i, hvordan skoledagene er på Mentiqa.<br />
+http://mentiqa.com/proeveuge<br />
+Ikke alle børn trives i det almindelige skolesystem. De falder igennem<br />
+på grund af deres anderledes tænkemåde – både i visse<br />
+faglige sammenhænge og socialt, hvor de ofte har svært ved at<br />
+begå sig. Se kendetegn på www.mentiqa.com<br />
+Vi lægger vægt på at højt begavede børn og børn med særlige kompetencer skal have et skoletilbud, hvor både deres trivsel og deres faglige udvikling skal tilgodeses.<br />
+<br />
+Har du spørgsmål, eller er du interesseret i en samtale om en eventuel skolestart for dit barn, <br />
+så ring eller skriv til skoleleder Arnfinn Rismoen<br />
+på telefon 98221911 mandag-fredag 08.45-14.00 <br />
+. eller pr. mail ar@mentiqa.com<br />
+Mulighed for prøveuge i flere klasser i uge 24, hvor vi også har indskolingsforløb.<br />
+<br />
+Inden aftale om prøveuge, skal man have en samtale med skoleleder. dette kan evt. være i uge 22 - send en mail eller kontakt os pr. tlf.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-13">13</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Fjordsafari ved Nørresundby Strandpark</h4>
+						<div class="desc">
+							Vi har inviteres Naturvejleder Ole Henrichsen til at give os en oplevelse af livet i fjoden. <br />
+5. klasse fra Vestbjerg Skole vil hjælpe med at fange rejer, krabber, mv.<br />
+Alle er velkomne	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			
+				<div class="events">
+					<div class="event">
+						<h4>* Graffiti på Fremtidens Plejehjem</h4>
+						<div class="desc">
+							Kom og vær’  med til at lave noget helt fantastisk og unik.<br />
+<br />
+Tirsdag 13. juni kl. 14: <br />
+Opstart med mini foredrag med Værket/Carsten Fronter Hansen, Siv og Cody. <br />
+Ideudveksling mht. motiver, farver og muligheder.<br />
+<br />
+Tirsdag 27. juni kl. 14:<br />
+Workshop m/ afprøvning af male- og skrivemetoder.<br />
+Fremvisning af oplæg til, hvad der skal males på plankeværket ud fra ideerne, som blev fundet på første møde.<br />
+<br />
+Frem til den store event dag udføres klargøring af plader med stregoptegning af motiver af Værket.<br />
+<br />
+Torsdag d. 6. juli fra kl. 10: Graffiti på Fremtiden Plejehjem med opstart kl. 10. <br />
+Ældre og evt. børn/unge fra lokalområdet inviteres til at deltage i malearbejdet. <br />
+Grillen vil blive tændt til frokost.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-14">14</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-15">15</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Ålegilde m. hele molevitten all you can eat 165 kr.</h4>
+						<div class="desc">
+							Stegte ål... all you can eat m. stuvede kartofler, persillesauce og nye danske kartofler...... hertil hjemmelavet citronfromage KUN 165 kr.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-16">16</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-17">17</time>
+				<div class="events">
+					<div class="event">
+						<h4>* GVA Gjøl Halvmarathon & Rundeløb</h4>
+						<div class="desc">
+							I forbindelse med Life of Sport's årlige GVA Gjøl Duathlon, har vi valgt at tilføje et særskilt Halvmarathon & rundeløb.<br />
+<br />
+Priser (LIGE NU) fra kun 50 kr.<br />
+- https://lifeofsport.nemtilmeld.dk/120/<br />
+<br />
+Belægningen på den 3 km løberute er grus, skovsti & asfalt. Ruten er flad.<br />
+<br />
+Vi håber med dette tiltag, at vi kan få ekstra stor stemning på pladsen og endnu mere hygge. <br />
+<br />
+Løbet kan selvfølgelig registreres i Klub 100 for 1/2 marathonløbere i Danmark (Officiel).<br />
+<br />
+Du får:<br />
+<br />
+- Danmarks bedste LOS forplejning - bestående af vand, cola, banan, og små overraskelser.<br />
+- Opmarkeret rute.<br />
+- Startnummer<br />
+- Diplom<br />
+- Mulighed for tilkøb af medalje (30 kr.)<br />
+- Naturskønne omgivelser. <br />
+- Toilet faciliteter.<br />
+- Lidt mad efterfølgende - EN OVERRASKELSE :-)<br />
+<br />
+Ingen irriterende chip, men derimod et stort digital ur, der viser din sluttid.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			
+				<div class="events">
+					<div class="event">
+						<h4>* GVA Gjøl Duathlon m/Stafet</h4>
+						<div class="desc">
+							EARLY BIRD PRISER LIGE NU:<br />
+https://lifeofsport.nemtilmeld.dk/105/<br />
+<br />
+GVA Gjøl Duathlon med Stafet og rundeløb, bliver mærket op i de skønneste naturomgivelser for 3. gang. Dette event henvender sig til HELE familien og også ELITEN.<br />
+<br />
+Hos Life of Sport har vi plads til ALLE uanset niveau, og vi gør alt for at jagte den gode oplevelse til jer.<br />
+<br />
+Til vores events er det ligepræcis DIG, der er i fokus - så ta' det gode humør med og udfordre dig selv. Om du kommer på "mormors den gamle", "lynet" eller din MTB, så er dette event lige noget for dig<br />
+<br />
+LØB - CYKEL - LØB med mulighed for Stafet.<br />
+- eller nap "blot" en løbetur i de dejlige omgivelser.<br />
+<br />
+3 distancer til Duathlon & Stafetten: <br />
+<br />
+1) 3 km løb -10 km cykel- 3 km løb<br />
+ (“Familie” – alle kan være med)<br />
+<br />
+2) 3 km løb – 20 km cykel – 6 km løb <br />
+(øvet)<br />
+<br />
+3) 6 km løb – 50 km cykel – 9 km løb <br />
+(Erfaren/elite)<br />
+<br />
+Duathlon:<br />
+<br />
+Du starter med løb, hvor du derefter henter din cykel i skiftezonen, og derefter starter cyklingen. Din cykel vil være placeret på et sikkert sted, og du har din egen plads med skiftetøj (ved start får du udleveret kasse til personlige egendele).<br />
+<br />
+Efter cykelturen kommer du tilbage til skiftezonen, og herefter begynder din sidste løbetur. Starten, skiftezonen og målområde er samme sted , der vil være mulighed for opbevaring af værdigenstande.<br />
+<br />
+Stafetten:<br />
+<br />
+Stafetten består af 2 deltager.<br />
+<br />
+Reglerne i stafetten er enkle – alle skift skal forgå i skiftezonen, også gælder det ellers blot om at komme først i mål.<br />
+<br />
+Dvs. Den 1. løber, den 2. deltager afventer i skiftezonen og gør sig klar til at cykle. Cyklen må først flyttes fra stativet, når vedkommende som løber kan klappe den anden deltager i hånden. Når personen er færdig med at cykle, så skal skiftet laves på sammevis inde i skiftezonen, altså cyklen skal placeres samme sted, hvor man tog den, og håndklappet udvekles.<br />
+<br />
+Rundeløb:<br />
+<br />
+Rute á 3 km, som kan løbes helt op til HALVMARATHON - ser mere på www.lifeofsport.dk	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			
+				<div class="events">
+					<div class="event">
+						<h4>* Jubilar-træf 2017</h4>
+						<div class="desc">
+							Kom og mød dine gamle klassekammerater og de andre fra årgang 1967, 1977 og 1992.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div></div>
+		<div class="row">
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-18">18</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-19">19</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-20">20</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Guidet tur på Limfjorden</h4>
+						<div class="desc">
+							Kom med på en guidet tur, hvor Sine fortæller om Aalborgs Havns historie, det hele foregår på limfjorden i en fantastik RIB båd.<br />
+<br />
+Billetter 250.- pr. person kan bestilles hos springeren-maritimt.dk eller på 98 11 78 03	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-21">21</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-22">22</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Vi holder lukket pga studentergilde travlhed :-(</h4>
+						<div class="desc">
+								
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-23">23</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Sankt. Hans på Cafe Lindholm</h4>
+						<div class="desc">
+							Traditionen tro inviterer Nordjyllands Historiske Museum i samarbejde med Cafe Lindholm, til en stemningsfuld Skt. Hans aften på det naturskønne område ved Lindholm Høje Museet. Det bliver en smuk sommeraften med toner fra den danske sangskat ved kammerkoret Coro Misto og båltale ved Mai-Britt Iversen, rådmand for Familie- og Beskæftigelsesforvaltningen.<br />
+<br />
+Inden da er der mulighed for at kombinere båltale og skønsang med en kulinarisk oplevelse i Café Lindholm, der byder på en speciel Sankt Hans buffet. Der serveres stort udvalg af sæsonenes retter  inkl. dessert i form af en klassisk Skt Hans kage. Pris for buffet kr. 275.- pr. kuvert, børn 3-10 år 1/2 pris Bordbestilling nødvendigt på tlf: 99317441.<br />
+<br />
+På bålpladsen vil der være mulighed for køb af helstegt pattegris med nordisk coleslaw og hjemmebagt brød, kr. 125. Peter Larsen kaffestand udvalg af forskellig kaffe, kr. 25.- Thisted Bryghus Fadøl, kr. 45.<br />
+<br />
+Vi glæder os til at se jer<br />
+Maxwell & Madfar	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-24">24</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Bonderøvsløbet 2017</h4>
+						<div class="desc">
+							EARLY BIRD PRISER til de hurtige:<br />
+https://lifeofsport.nemtilmeld.dk/114/<br />
+<br />
+Et magisk sted - nær Aalborg afvikles dette skøre, sjove og anderledes løb igen i år. Vi har distancer for ALLE.<br />
+<br />
+Løb fra ca. 1 km til 28 km.<br />
+<br />
+Life of Sport finder den gamle støvet hat frem, og for et kort øjeblik , vender vi blikket væk fra nutiden, og tager dig med på en nostalgisk rejse tilbage i tiden. Vi skal helt præcist tilbage til 1950. Dette var tidspunktet, hvor den første Morten Korch film udkom på lærredet, ”De røde heste”.<br />
+<br />
+Dette blev starten på en lang række film, som fik indbegrebet af små konflikter, kærlighed, idyl og hygge i det danske landsbrugsmiljø.<br />
+<br />
+Life of Sport ønsker at bringe denne stemning frem til Bonderøvsløbet. Det vil sige, at man ikke skal være bange for:<br />
+<br />
+Frisk mælk<br />
+Smørrebrød<br />
+Rødternet dug<br />
+Halmballer<br />
+Og meget mere :)<br />
+Selve løbet kommer til at foregå i Dall Villaby og dens omkringliggende natur. Bonderøvsløbet bliver arrangeret i forbindelse med den lokale byfest, som arrangeres af Dall Villabys Støtteforening.<br />
+<br />
+Selve løbet vil være et rundeløb (mulighed for halvmarathon), hvor distancen vil være 7 km. Vi har fundet en perfekt rute, hvor marker og skøn natur vil være i højsæde.<br />
+<br />
+ALLE kan deltage, og man behøver ikke et bestemt niveau – perfekt til nye motionister, som erfarne løbere.<br />
+<br />
+Løbet kan registreres i Klub 100 Halvmarathon.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div></div>
+		<div class="row">
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-25">25</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Guidet tur på Limfjorden</h4>
+						<div class="desc">
+							Kom med på en guidet tur, hvor Sine fortæller om Aalborgs Havns historie, det hele foregår på limfjorden i en fantastik RIB båd.<br />
+<br />
+Billetter 250.- pr. person kan bestilles hos springeren-maritimt.dk eller på 98 11 78 03	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-26">26</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-27">27</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Guidet tur på Limfjorden</h4>
+						<div class="desc">
+							Kom med på en guidet tur, hvor Sine fortæller om Aalborgs Havns historie, det hele foregår på limfjorden i en fantastik RIB båd.<br />
+<br />
+Billetter 250.- pr. person kan bestilles hos springeren-maritimt.dk eller på 98 11 78 03	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-28">28</time></div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-29">29</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Stegt flæsk ad libitum kun 85 kr.</h4>
+						<div class="desc">
+							Stegt flæsk ad libitum med nye danske kartofler, persillesauce og hjemmesyltede rødbeder...... KUN 85 kr.	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="col-xs-12 calendar-day">
+		<time datetime="2017-06-30">30</time>
+				<div class="events">
+					<div class="event">
+						<h4>* Raceday #2 Aalborg Banen 2017 - Back to basic</h4>
+						<div class="desc">
+							Program:<br />
+18:00: Teknisk kontrol starter<br />
+19:00: Porten er åben for publikum<br />
+19:30: Kørermøde (ca. 5-10 minutter)<br />
+20-24: Ræs for alle køretøjer.<br />
+<br />
+Priser:<br />
+Bil m/plader: 50 kr.<br />
+Bil u/plader: 200 kr.<br />
+MC m/plader: 100 kr.<br />
+MC u/plader: 300 kr. <br />
+<br />
+Yderligere information kan findes på http://racedays.dk/praktisk-information/	
+						</div>
+						<div class="location"> <span class="glyphicon glyphicon-map-marker"></span> State St and Rt 5, Erie, Pa.</div>
+						<div class="datetime"> <span class="glyphicon glyphicon-time"></span> 12:00am - 1:00pm</div>
+						<div class="attending">
+							<img src="http://api.randomuser.me/portraits/women/54.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/27.jpg" />
+							<img src="http://api.randomuser.me/portraits/men/61.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+    <div class="col-xs-12 calendar-day calendar-no-current-month">
+		<time datetime="2017-7-7">7</time>
+	</div></div>
+</div>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/calendar.js'></script>
 </body>
 </html>
