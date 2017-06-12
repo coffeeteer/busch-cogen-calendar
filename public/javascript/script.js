@@ -1,13 +1,5 @@
 $(document).ready(function(){
-	var calendar = $('#calendar').calendar({
-    events_source: [
-        {
-            "id": 293,
-            "title": "Event 1",
-            "url": "http://example.com",
-            "class": "event-important",
-            "start": 12039485678000, // Milliseconds
-            "end": 1234576967000 // Milliseconds
-        }
-    ]});
+	$('#body').on(function init() {
+        scheduler.init('scheduler_here',new Date(2013,8,4),"month");
+    });
 }); //Document.ready

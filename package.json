@@ -17,7 +17,14 @@
   },
   "homepage": "https://github.com/coffeeteer/busch-cogen-calendar#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "es6-promise": "^4.1.0",
     "express": "^4.15.3",
-    "morgan": "^1.8.2"
+    "mongodb": "^2.2.28",
+    "mongodb-core": "^2.1.12",
+    "mongoskin": "^2.1.0",
+    "morgan": "^1.8.2",
+    "readable-stream": "^2.2.11"
   }
 }
