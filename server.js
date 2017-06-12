@@ -4,12 +4,15 @@ var logger = require('morgan');
 
 const app = express();
 
-app.use(express.static('./public'));
-app.use(logger('combined'));
+app.use(express.static(__dirname + './public'));
+app.use(logger('dev', {
+  skip: function (req, res) { return res.statusCode < 400 }
+}));
+
 
 app.get('/', (req, res) => {
-	res.sendFile('index.html');
-	// res.sendFile('./public/app.html', { root: __dirname });
+	// res.sendFile(__dirname + 'index.html');
+	res.sendFile('./public/index.html', { root: __dirname });
 });
 
 const server = new http.Server(app);
