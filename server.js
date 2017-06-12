@@ -28,6 +28,38 @@ app.get('/', (req, res) => {
 	// res.sendFile('./public/index.html', { root: __dirname });
 });
 
+//DHX Calendar **********************
+app.get('/init', function(req, res){
+    db.event.insert({ 
+        text:"My test event A", 
+        start_date: new Date(2017,5,1),
+        end_date:   new Date(201,5,5)
+    });
+    db.event.insert({ 
+        text:"One more test event", 
+        start_date: new Date(2017,5,8),
+        end_date:   new Date(2017,5,9),
+        color: "#BADA55"
+    });
+
+    /*... skipping similar code for other test events...*/
+
+    res.send("Test events were added to the database")
+});
+
+
+app.get('/data', function(req, res){
+    db.event.find().toArray(function(err, data){
+        //set id property for all records
+        for (var i = 0; i < data.length; i++)
+            data[i].id = data[i]._id;
+
+        //output response
+        res.send(data);
+    });
+});
+//DHX Calendar ****************************************
+
 const server = new http.Server(app);
 
 const port = process.env.PORT || 3010;

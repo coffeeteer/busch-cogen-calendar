@@ -1,5 +1,5 @@
 $(document).ready(function(){
 	$('#body').on(function init() {
-        scheduler.init('scheduler_here',new Date(2013,8,4),"month");
+        scheduler.init('scheduler_here',Date.now(),"month");
     });
 }); //Document.ready
