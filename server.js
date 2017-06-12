@@ -1,9 +1,11 @@
 var http = require('http');
 var express = require('express');
+var logger = require('morgan');
 
 const app = express();
 
 app.use(express.static('./public'));
+app.use(logger('combined'));
 
 app.get('/', (req, res) => {
 	res.sendFile('index.html');
