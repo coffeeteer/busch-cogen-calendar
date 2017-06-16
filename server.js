@@ -33,7 +33,8 @@ app.get('/init', function(req, res){
     db.event.insert({ 
         text:"My test event A", 
         start_date: new Date(2017,5,1),
-        end_date:   new Date(201,5,5)
+        end_date:   new Date(2017,5,5), 
+        color: '#cccccc'
     });
     db.event.insert({ 
         text:"One more test event", 
@@ -43,8 +44,7 @@ app.get('/init', function(req, res){
     });
 
     /*... skipping similar code for other test events...*/
-
-    res.send("Test events were added to the database")
+    res.send("Test events were added to the database");
 });
 
 
