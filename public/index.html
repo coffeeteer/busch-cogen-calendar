@@ -17,7 +17,7 @@
 	<script src="/codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script><!-- DHX Scheduler -->
 	<script type="text/javascript" src="/javascript/script.js"></script>
 </head>
-<body id="body" onload="init();">
+<body id="body" ready="init();">
 	<div id="calendar">Hello, interwebs</div>
 
     <div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
@@ -36,9 +36,11 @@
         </div>
     </div>
     	<script type="text/javascript">
-		    		function init() {
-		        scheduler.init('scheduler_here',new Date(2013,8,4),"month");
-		    }
+    		// function init() {
+		    //     scheduler.init('scheduler_here',new Date(2017,5,4),"month");
+		    // }
+
+
     	</script>
 </body>
 </html>
