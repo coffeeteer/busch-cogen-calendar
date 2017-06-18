@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 //connect to the mongoDB
-var db = require('mongoskin').db("localhost/testdb", { w: 0});
+var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
     db.bind('event');
 
 const app = express();
@@ -25,10 +25,13 @@ app.use(logger('dev', {
 
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + 'index.html');
-	// res.sendFile('./public/index.html', { root: __dirname });
 });
 
 //DHX Calendar **********************
+// db.article.find().toArray(function(err, items) {
+//         db.close();
+// });
+
 app.get('/init', function(req, res){
     db.event.insert({ 
         text:"My test event A", 
