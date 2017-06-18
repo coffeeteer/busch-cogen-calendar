@@ -5,14 +5,6 @@ $(document).ready(function(){
 		{id: 2, text: 'Glenn H', start_date: '2017/06/16 16:15', end_date: '2017/06/17 08:00'}
 	];
 
-	// CREATE TABLE `events` (
-	//   `id` int(11) NOT NULL AUTO_INCREMENT,
-	//   `start_date` datetime NOT NULL,
-	//   `end_date` datetime NOT NULL,
-	//   `text` varchar(255) NOT NULL,
-	//   PRIMARY KEY (`id`)
-	// )
-
 	(function init() {
 		scheduler.config.xml_date='%Y-%m-%d %H:%i';
 
@@ -20,5 +12,24 @@ $(document).ready(function(){
 
 	    scheduler.parse(events, 'json');
     })();
+
+ //    CREATE TABLE `events` (
+	//   `id` int(11) NOT NULL AUTO_INCREMENT,
+	//   `start_date` datetime NOT NULL,
+	//   `end_date` datetime NOT NULL,
+	//   `text` varchar(255) NOT NULL,
+	//   PRIMARY KEY (`id`)
+	// )
+
+	var con = mysql.createConnection({
+	  host: 'localhost',
+	  user: 'root',
+	  password: ''
+	});
+
+	con.connect(function(err) {
+	  if (err) throw err;
+	  console.log('Connected!');
+	});
     
 }); //Document.ready

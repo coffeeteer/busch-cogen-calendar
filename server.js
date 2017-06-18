@@ -5,10 +5,13 @@ var path = require('path');
 var Promise = require('es6-promise').Promise;
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+// var Server = require('mongodb-core').Server
+// var assert = require('assert');
+
 
 //connect to the mongoDB
-var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
-    db.bind('event');
+// var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
+//     db.bind('event');
 
 const app = express();
 
