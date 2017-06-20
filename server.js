@@ -72,12 +72,39 @@ app.get('/data', function(req, res){
 /*---------- SQL Database -------------*/
 connection.connect();
 
-connection.query('SELECT * from staff', function(err, rows, fields) {
-  if (!err)
-    console.log('The solution is: ', rows);
-  else
-    console.log('Error while performing Query.');
-});
+// connection.query('SELECT * from staff', function(err, rows, fields) {
+//   if (!err)
+//     console.log('The solution is: ', rows);
+//   else
+//     console.log('Error while performing Query.');
+// }); // original copy
+
+// CREATE TABLE IF NOT Exists `shifts` (
+//   `id` int(11) NOT NULL AUTO_INCREMENT,
+//   `start_date` datetime NOT NULL,
+//   `end_date` datetime NOT NULL,
+//   `text` varchar(255) NOT NULL,
+//   PRIMARY KEY (`id`)
+// )
+
+connection.connect(function(err) {
+  if (err) throw err
+  console.log('You are now connected...')
+
+  connection.query('CREATE TABLE IF NOT EXISTS events * FROM cogen(id INT PRIMARY KEY AUTO_INCREMENT, start_date DATETIME NOT NULL, end_date DATETIME NOT NULL, text VARCHAR(255))', function(err, result) {
+    if (err) throw err
+    connection.query('INSERT INTO events (start_date, end_date, text) VALUES (?, ?, ?)', ['Larry', '41', 'California, USA'], function(err, result) {
+      if (err) throw err
+      connection.query('SELECT * FROM events', function(err, results) {
+        if (err) throw err
+        console.log(results[0].id)
+        console.log(results[0].name)
+        console.log(results[0].age)
+        console.log(results[0].address)
+      })
+    })
+  }) 
+})
 
 connection.end();
 /*---------- SQL Database -------------*/
