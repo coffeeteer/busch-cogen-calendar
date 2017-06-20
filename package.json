@@ -25,6 +25,7 @@
     "mongodb-core": "^2.1.12",
     "mongoskin": "^2.1.0",
     "morgan": "^1.8.2",
+    "mysql": "^2.13.0",
     "node-mysql": "^0.4.2",
     "readable-stream": "^2.2.11"
   }

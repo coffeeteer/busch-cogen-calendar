@@ -5,9 +5,13 @@ var path = require('path');
 var Promise = require('es6-promise').Promise;
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// var Server = require('mongodb-core').Server
-// var assert = require('assert');
-
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database : 'cogen'
+});
 
 //connect to the mongoDB
 // var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
@@ -24,7 +28,6 @@ app.use(express.static(path.join('./public')));
 app.use(logger('dev', {
   skip: function (req, res) { return res.statusCode < 400 }
 }));
-
 
 app.get('/', (req, res) => {
 	res.sendFile(__dirname + 'index.html');
@@ -65,6 +68,19 @@ app.get('/data', function(req, res){
     });
 });
 //DHX Calendar ****************************************
+
+/*---------- SQL Database -------------*/
+connection.connect();
+
+connection.query('SELECT * from staff', function(err, rows, fields) {
+  if (!err)
+    console.log('The solution is: ', rows);
+  else
+    console.log('Error while performing Query.');
+});
+
+connection.end();
+/*---------- SQL Database -------------*/
 
 const server = new http.Server(app);
 
