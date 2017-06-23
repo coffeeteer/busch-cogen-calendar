@@ -71,22 +71,22 @@ app.get('/data', function(req, res){
 
 /*---------- SQL Database -------------*/
 
-// CREATE TABLE IF NOT Exists `shifts` (
-//   `id` int(11) NOT NULL AUTO_INCREMENT,
-//   `start_date` datetime NOT NULL,
-//   `end_date` datetime NOT NULL,
-//   `text` varchar(255) NOT NULL,
+// CREATE TABLE `events` (
+//  `id` int(11) NOT NULL AUTO_INCREMENT,
+//  `start_time` time NOT NULL,
+//  `end_time` time NOT NULL,
+//  `text` varchar(255) NOT NULL,
 //   PRIMARY KEY (`id`)
 // )
-// connection.connect(function(err){
-// 	if(err){
-// 		console.error('Erroring connecting to MySQL');
-// 		return;
-// 	}
-// 	console.log('Connection established!');
-// });
+connection.connect(function(err){
+	if(err){
+		console.error('Erroring connecting to MySQL');
+		return;
+	}
+	console.log('Connection established!');
+});
 
-connection.query('SELECT events FROM cogen',function(err, rows) {
+connection.query('SELECT * FROM events;', function(err, rows) {
 	if(err) return err;
 
 	console.log('Data received for Database \n');
