@@ -90,7 +90,11 @@ connection.query('SELECT * FROM events;', function(err, rows) {
 	if(err) return err;
 
 	console.log('Data received for Database \n');
-	console.log(rows);
+	// console.log(rows);
+	for (var i = 0; i < rows.length; i++) {
+	  console.log(rows[i].text);
+	  //alert(rows[i].text)
+	};
 });
 
 connection.end(function(err){

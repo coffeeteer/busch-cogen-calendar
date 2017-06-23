@@ -13,14 +13,6 @@ $(document).ready(function(){
 	    scheduler.parse(events, 'json');
     })();
 
- //    CREATE TABLE `events` (
-	//   `id` int(11) NOT NULL AUTO_INCREMENT,
-	//   `start_date` datetime NOT NULL,
-	//   `end_date` datetime NOT NULL,
-	//   `text` varchar(255) NOT NULL,
-	//   PRIMARY KEY (`id`)
-	// )
-
 	var con = mysql.createConnection({
 	  host: 'localhost',
 	  user: 'root',
