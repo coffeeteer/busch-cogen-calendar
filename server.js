@@ -7,12 +7,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'cogen'
-}, 'pool');
+var index = require('./models/index.js');
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : '',
+//   database : 'cogen'
+// });
 
 //connect to the mongoDB
 // var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
@@ -81,45 +82,6 @@ app.get('/data', function(req, res){
 //     });
 // });
 //DHX Calendar ****************************************
-
-/*---------- SQL Database -------------*/
-
-// CREATE TABLE `events` (
-//  `id` int(11) NOT NULL AUTO_INCREMENT,
-//  `start_time` time NOT NULL,
-//  `end_time` time NOT NULL,
-//  `text` varchar(255) NOT NULL,
-//   PRIMARY KEY (`id`)
-// )
-connection.connect(function(err){
-	if(err){
-		console.error('Erroring connecting to MySQL');
-		return;
-	}
-	console.log('Connection established!');
-});
-
-connection.query('SELECT * FROM events;', function(err, rows) {
-	if(err) return err;
-
-	// var body = req.params;
-	console.log('Data received for Database \n');
-	console.log(rows)
-	.then(function(rows) {
-    return res.json(rows);
-  });
-	// for (var i = 0; i < rows.length; i++) {
-	//   // console.log(rows[i].text);
-	//   //alert(rows[i].text)
-	// };
-});
-
-
-connection.end(function(err){
-	console.log('connection ended gracefully');
-});
-
-/*---------- SQL Database -------------*/
 
 const server = new http.Server(app);
 
