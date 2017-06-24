@@ -11,13 +11,8 @@ $(document).ready(function(){
     	scheduler.init('scheduler_here', new Date(), 'month'); // Starts with today's date
 
 	    scheduler.parse(events, 'json');
+	    scheduler.parse(rows, 'json')
     })();
-
-	var con = mysql.createConnection({
-	  host: 'localhost',
-	  user: 'root',
-	  password: ''
-	});
 
 	con.connect(function(err) {
 	  if (err) throw err;

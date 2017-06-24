@@ -6,12 +6,13 @@ var Promise = require('es6-promise').Promise;
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
+
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '',
   database : 'cogen'
-});
+}, 'pool');
 
 //connect to the mongoDB
 // var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
@@ -56,7 +57,7 @@ app.get('/init', function(req, res){
     res.send("Test events were added to the database");
 });
 
-
+/*Using MySQL for calendar*/
 app.get('/data', function(req, res){
     db.event.find().toArray(function(err, data){
         //set id property for all records
@@ -67,6 +68,18 @@ app.get('/data', function(req, res){
         res.send(data);
     });
 });
+/*Using MySQL for calendar*/
+
+// app.get('/data', function(req, res){
+//     db.event.find().toArray(function(err, data){
+//         //set id property for all records
+//         for (var i = 0; i < data.length; i++)
+//             data[i].id = data[i]._id;
+
+//         //output response
+//         res.send(data);
+//     });
+// });
 //DHX Calendar ****************************************
 
 /*---------- SQL Database -------------*/
@@ -89,13 +102,18 @@ connection.connect(function(err){
 connection.query('SELECT * FROM events;', function(err, rows) {
 	if(err) return err;
 
+	// var body = req.params;
 	console.log('Data received for Database \n');
-	// console.log(rows);
-	for (var i = 0; i < rows.length; i++) {
-	  console.log(rows[i].text);
-	  //alert(rows[i].text)
-	};
+	console.log(rows)
+	.then(function(rows) {
+    return res.json(rows);
+  });
+	// for (var i = 0; i < rows.length; i++) {
+	//   // console.log(rows[i].text);
+	//   //alert(rows[i].text)
+	// };
 });
+
 
 connection.end(function(err){
 	console.log('connection ended gracefully');
