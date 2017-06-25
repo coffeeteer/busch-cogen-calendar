@@ -32,6 +32,4 @@ connection.end(function(err){
 	console.log('connection ended gracefully');
 });
 
-console.log('got the connection');
-
 module.exports = {};

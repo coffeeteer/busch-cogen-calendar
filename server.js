@@ -8,16 +8,6 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 
 var index = require('./models/index.js');
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : '',
-//   database : 'cogen'
-// });
-
-//connect to the mongoDB
-// var db = require('mongoskin').db("mongodb://localhost:27017/cogen-employ", { w: 0});
-//     db.bind('event');
 
 const app = express();
 
@@ -36,9 +26,6 @@ app.get('/', (req, res) => {
 });
 
 //DHX Calendar **********************
-// db.article.find().toArray(function(err, items) {
-//         db.close();
-// });
 
 app.get('/init', function(req, res){
     db.event.insert({ 
@@ -60,15 +47,18 @@ app.get('/init', function(req, res){
 
 /*Using MySQL for calendar*/
 app.get('/data', function(req, res){
-    db.event.find().toArray(function(err, data){
+    console.log('hitting app.get("data")');
+    connection.event.find().toArray(function(err, data){
         //set id property for all records
-        for (var i = 0; i < data.length; i++)
-            data[i].id = data[i]._id;
-
+        for (var i = 0; i < rows.length; i++)
+            rows[i].text;
+            console.log('hitting app.get("data") part 2');
         //output response
         res.send(data);
     });
 });
+
+
 /*Using MySQL for calendar*/
 
 // app.get('/data', function(req, res){
