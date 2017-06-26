@@ -11,7 +11,7 @@ $(document).ready(function(){
     	scheduler.init('scheduler_here', new Date(), 'month'); // Starts with today's date
 
 	    scheduler.parse(events, 'json');
-	    scheduler.parse(rows, 'json')
+	    scheduler.parse('/data', 'json');
     })();
 
 	con.connect(function(err) {

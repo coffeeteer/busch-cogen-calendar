@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 
-var index = require('./models/index.js');
+// var index = require('./models/index.js');
 
 const app = express();
 
@@ -27,32 +27,15 @@ app.get('/', (req, res) => {
 
 //DHX Calendar **********************
 
-app.get('/init', function(req, res){
-    db.event.insert({ 
-        text:"My test event A", 
-        start_date: new Date(2017,5,1),
-        end_date:   new Date(2017,5,5), 
-        color: '#cccccc'
-    });
-    db.event.insert({ 
-        text:"One more test event", 
-        start_date: new Date(2017,5,8),
-        end_date:   new Date(2017,5,9),
-        color: "#BADA55"
-    });
-
-    /*... skipping similar code for other test events...*/
-    res.send("Test events were added to the database");
-});
-
 /*Using MySQL for calendar*/
 app.get('/data', function(req, res){
     console.log('hitting app.get("data")');
     connection.event.find().toArray(function(err, data){
+        console.log('going through connection event');
         //set id property for all records
         for (var i = 0; i < rows.length; i++)
             rows[i].text;
-            console.log('hitting app.get("data") part 2');
+            console.log('hitting app.get("data") for loop');
         //output response
         res.send(data);
     });
@@ -60,17 +43,6 @@ app.get('/data', function(req, res){
 
 
 /*Using MySQL for calendar*/
-
-// app.get('/data', function(req, res){
-//     db.event.find().toArray(function(err, data){
-//         //set id property for all records
-//         for (var i = 0; i < data.length; i++)
-//             data[i].id = data[i]._id;
-
-//         //output response
-//         res.send(data);
-//     });
-// });
 //DHX Calendar ****************************************
 
 const server = new http.Server(app);
